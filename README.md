@@ -1,2 +1,2 @@
 # full-stack-development
-html,css,js
+Hyper Text Markup Language, Cascading Style Sheet, Javascript

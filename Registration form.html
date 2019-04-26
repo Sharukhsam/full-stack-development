@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="Rformstyle.css">
+    </head>
+    <body>
+        <form>
+            <div class="registration">
+                    <img src="logo.png" style="float:right;">
+            <div class="nav">
+              <h1>Digital Lync</h1>
+              <h2>Registration Form</h2>
+              
+              <hr>
+            </div>
+            <div class="form">
+              <label>First Name :</label>
+                <input type="text" placeholder="surname" id="firstName" name="firstName" size="40" maxlength="30">(max 30 character A-Z)<br><br>
+                <label>Last Name :</label>
+                <input type="text" placeholder="write your name" id="lastName" name="lastName"  size="40" maxlength="30">(max 30 character A-Z)<br><br>
+                <label>Gender :</label>
+                <input type="radio" id="gender" name="Gender" value="Male">Male
+                <input type="radio" id="gender" name="Gender" value="Female">Female
+                <input type="radio" id="gender" name="Gender" value="other">Other<br><br>
+                <lable>Date Of Birth:</lable>
+                <input type="date" id="dateofBirth" name="dateofBirth" ><br><br>
+                <lable>Mobile Number:</lable>
+                <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="enter your number here" maxlength="10">(Add your country code+ 10 digit no.)<br><br>
+                <label>Email:</label>
+                <input type="email" name="email" id="email" placeholder="enter your email here" size="40" maxlength="30" ><br><br>
+                <label>Address:</label>
+                <textarea  id="address" rows="10" cols="10" style="vertical-align:top; width:400px; height:100px; resize:none;"></textarea><br><br>
+                <label>Highest Qualification:</label>
+                <input type="text" name="qualification" id="qualification"><br><br>
+                <label>Course:</label>
+                <select name="coursename" id="coursename">
+                    <option value="-1">Select</option>
+                    <option value="Mean Stack Develoment">Mean Stack Develoment</option>
+                    <option value="Mern Stack">Mern Stack</option>
+                    <option value="Automation">Automation</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                </select><br><br>
+                <label>Course Type:</label>
+                <input type="radio" name="coursetype" id="coursetype" value="Offline">Offline
+                <input type="radio" name="coursetype" id="coursetype" value="Online">Online
+                <input type="radio" name="coursetype" id="coursetype" value="Recorded">Recorded<br><br>
+                <label>Reason for the course:</label>
+                <textarea  id="reason"  style="vertical-align:top; width:400px; height:100px; resize:none;"></textarea><br><br>
+                <input type="checkbox" id="checkbox" name="checkbox" value="checked">I accept the terms and conditions of the institution.<br><br>
+                <button type="submit" class="reisterbtn" onclick="registeruser()">Register Here</button>
+            </div>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <h1>Registration Details</h1>
+        <p id="firstName_msg"></p>
+        <p id="lastName_msg"></p>
+        <p id="gender_msg"></p>
+        <p id="dateofBirth_msg"></p>
+        <p id="mobileNumber_msg"></p>
+        <p id="email_msg"></p>
+        <p id="address_msg"></p>
+        <p id="qualification_msg"></p>
+        <p id="coursename_msg"></p>
+        <p id="coursetype_msg"></p>
+        <p id="reason_msg"></p>
+        <p id="checkbox_msg"></p>
+    
+        <script>
+            function registeruser(){
+                event.preventDefault();
+                var firstName=document.getElementById('firstName').value;
+                var lastName=document.getElementById('lastName').value;
+                var Gender=document.getElementById('gender').value;
+                var dateofBirth=document.getElementById('dateofBirth').value;
+                var mobileNumber=document.getElementById('mobileNumber').value;
+                var email=document.getElementById('email').value;
+                var address=document.getElementById('address').value;
+                var qualification=document.getElementById('qualification').value;
+                var coursename=document.getElementById('coursename').value;
+                var coursetype=document.getElementById('coursetype').value;
+                var Reason=document.getElementById('reason').value;
+                var Checkbox=document.getElementById('checkbox').value;
+
+                document.getElementById('firstName_msg').innerHTML=firstName;
+                document.getElementById('lastName_msg').innerHTML=lastName;
+                document.getElementById('gender_msg').innerHTML=Gender;
+                document.getElementById('dateofBirth_msg').innerHTML=dateofBirth;
+                document.getElementById('mobileNumber_msg').innerHTML=mobileNumber;
+                document.getElementById('email_msg').innerHTML=email;
+                document.getElementById('address_msg').innerHTML=address;
+                document.getElementById('qualification_msg').innerHTML=qualification;
+                document.getElementById('coursename_msg').innerHTML=coursename;
+                document.getElementById('coursetype_msg').innerHTML=coursetype;
+                document.getElementById('reason_msg').innerHTML=reason;
+                document.getElementById('checkbox_msg').innerHTML=Checkbox;
+                
+            }
+        </script>
+    </body>
+</html>

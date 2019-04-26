@@ -1,0 +1,14 @@
+.registration{
+
+    background: #F8F8FF;
+    border: 2px solid black;
+    padding:20px;
+    
+}
+.registration nav{
+    text-align: center;
+
+}
+.registration form{
+    background: yellow;
+}
